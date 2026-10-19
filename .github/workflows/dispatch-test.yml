@@ -1,0 +1,12 @@
+name: dispatch-test
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: note
+        required: false
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "dispatched ${{ inputs.note }}"
